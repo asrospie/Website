@@ -6,7 +6,6 @@
 	main {
 		text-align: center;
 		background-color: rgb(228, 231, 235);
-		margin-bottom: 0;
 	}
 	.initiative-list {
 		list-style-type: none;

@@ -25,4 +25,4 @@
 	<Router {routes} />
 </body>
 
-<Footer />
+<!-- <Footer /> -->

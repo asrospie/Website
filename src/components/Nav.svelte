@@ -1,7 +1,4 @@
 <style>
-    .nav-link {
-        color: white;
-    }
 </style>
 
 <script>
@@ -13,7 +10,6 @@
     import { home, code } from 'svelte-awesome/icons';
 
     const style = "color: white;";
-	export let segment;
     let isOpen = false;
 
     function handleUpdate(event) {
