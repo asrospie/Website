@@ -66,8 +66,7 @@
 	const src = "assets/avatar.jpeg";
 	const alt = "Profile Image";
 
-	const resume = "/assets/Alec Rospierski Resume 2020.pdf";
-	const newName = "Alec Rospierski Resume"
+	const resume = "https://github.com/asrospie/website/blob/master/public/assets/Alec%20Rospierski%20Resume%202020.pdf";
 
 	let experience = [
 		{
@@ -126,6 +125,6 @@
 			</div>
 			<br /><div class="vline"></div><br />
 		{/each}
-        <a class="btn btn-primary btn-circle" href={resume} title="Download" download={newName}>Download Resume</a>
+        <a class="btn btn-primary btn-circle" href={resume} title="Download" >View Resume</a>
 	</div>
 </main>
