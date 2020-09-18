@@ -2,10 +2,18 @@
     <title>D&D Tools</title>
 </svelte:head>
 
-<script>
-    import Nav from '../components/Nav.svelte';
-    import { each } from "svelte/internal";
+<style>
+	main {
+		text-align: center;
+		background-color: rgb(228, 231, 235);
+		margin-bottom: 0;
+	}
+	.initiative-list {
+		list-style-type: none;
+	}
+</style>
 
+<script>
 	$: list = [];
 	$: newName = '';
 	$: newInitiative = '';
@@ -39,8 +47,6 @@
 
 </script>
 
-<Nav />
-
 <main>
 	<h1>Basic Initiative Tracker</h1>
 	<input value={newName} placeholder="Name" type="text" on:change={e => { 
@@ -61,11 +67,3 @@
 	<button on:click={clearItems}>Clear Creatures</button>
 </main>
 
-<style>
-	main {
-		text-align: center;
-	}
-	.initiative-list {
-		list-style-type: none;
-	}
-</style>
