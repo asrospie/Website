@@ -4,7 +4,7 @@
 </svelte:head>
 <script>
 	import Home from './routes/Home.svelte';
-	import DnDTools from './routes/DnDTools.svelte';
+	import DnDTools from './routes/DnDTools/index.svelte';
 	import Nav from './components/Nav.svelte';
 	import Footer from './components/Footer.svelte'
 
@@ -17,6 +17,10 @@
 </script>
 
 <style>
+	body {
+		background-color: rgb(234, 236, 239);
+		height: 100vh;
+	}
 </style>
 
 <Nav />

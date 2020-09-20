@@ -31,9 +31,9 @@
             <!-- <NavItem>
                 <NavLink href=".">Blog</NavLink>
             </NavItem> -->
-            <!-- <NavItem>
+            <NavItem>
 				<NavLink href="#/dndtools">D&D Tools</NavLink>
-            </NavItem> -->
+            </NavItem>
             <NavItem>
                 <NavLink href="https://github.com/asrospie/">GitHub</NavLink>
             </NavItem>
