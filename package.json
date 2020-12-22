@@ -1,13 +1,14 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
+  "name": "website",
+  "description": "Alec Rospierski's personal website",
+  "version": "1.0.0",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
-    "validate": "svelte-check --ignore src/node_modules/@sapper"
+    "validate": "svelte-check --ignore src/node_modules/@sapper",
+    "srg": "npm run export && surge __sapper__/export alec.surge.sh"
   },
   "dependencies": {
     "compression": "^1.7.1",
