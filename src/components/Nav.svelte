@@ -1,42 +1,41 @@
-<style>
-</style>
+<script lang='ts'>
+    import { 
+        Collapse, Nav, NavbarBrand, NavbarToggler,
+        NavItem, NavLink, Navbar,
+    } from 'sveltestrap/src';
 
-<script>
-    import {
-        Button, Collapse, Nav, Navbar, NavbarBrand, NavbarToggler,
-        NavItem, NavLink,
-    } from 'sveltestrap'; 
-    import Icon from 'svelte-awesome';
-    import { home, code } from 'svelte-awesome/icons';
-
-    const style = "color: white;";
+    const style: string = 'color: white;';
     let isOpen = false;
 
-    function handleUpdate(event) {
+    function handleUpdate(event: any) {
         isOpen = event.detail.isOpen;
     }
-
 </script>
 
-<Navbar expand="md" dark color="dark" sticky="top">
-    <NavbarBrand href="/">Alec Rospierski</NavbarBrand>
-    <NavbarToggler on:click={() => {isOpen = !isOpen}} />
-    <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
-        <Nav class="ml-auto" navbar>
+<Navbar expand='md' dark color='dark' sticky='top'>
+    <NavbarBrand href='/'>Alec Rospierski</NavbarBrand>
+    <NavbarToggler on:click={() => isOpen = !isOpen} />
+    <Collapse {isOpen} navbar expand='md' on:update={handleUpdate}>
+        <Nav class='ml-auto' navbar>
             <NavItem>
-                <NavLink href="/">Home</NavLink>
-                <!-- <a class="nav-link" href="/"><Icon data={home} {style}/>Home</a> -->
-            </NavItem>
-            <!-- TODO -->
-            <!-- <NavItem>
-                <NavLink href=".">Blog</NavLink>
-            </NavItem> -->
-            <NavItem>
-				<NavLink href="#/dndtools">D&D Tools</NavLink>
+                <!-- <NavLink href='/'>Home</NavLink> -->
+                <a class='nav-link' href='/'>Home</a>
             </NavItem>
             <NavItem>
-                <NavLink href="https://github.com/asrospie/">GitHub</NavLink>
+                <!-- <NavLink href='/dndtools'>D&D Tools</NavLink> -->
+                <a class='nav-link' href='/dndtools'>D&D Tools</a>
+            </NavItem>
+            <NavItem>
+                <!-- <NavLink href='https://github.com/asrospie/'>GitHub</NavLink> -->
+                <a class='nav-link' href='https://github.com/asrospie/'>GitHub</a>
             </NavItem>
         </Nav>
     </Collapse>
+    <div style="visibility: hidden; position: absolute">
+        <a href="/">home</a>
+        <a href="/dndtools">d&d tools</a>
+        <a href="https://github.com/asrospie">github</a>
+    </div>
 </Navbar>
+
+<style></style>

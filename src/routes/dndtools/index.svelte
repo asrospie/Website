@@ -1,39 +1,5 @@
-<svelte:head>
-    <title>DnD Tools</title>
-</svelte:head>
-
-<style>
-    main {
-        text-align: center;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .row {
-        justify-content: center;
-        align-items: center;
-        margin: 12px;
-    }
-
-    .row-element {
-        margin: 2px;
-    }
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-</style>
-
 <script>
-    import CreatureCard from './CreatureCard.svelte';
-
+    import CreatureCard from './_CreatureCard.svelte';
     let creatureList = [];
     let newName = '';
     let newInitiative;
@@ -64,8 +30,11 @@
     function clearCombat() {
         creatureList = [];
     }
-
 </script>
+
+<svelte:head>
+    <title>DnD Tools</title>
+</svelte:head>
 
 <main>
     <div class="jumbotron">
@@ -101,3 +70,30 @@
         </div>
     </div>
 </main>
+
+<style>
+    main {
+        text-align: center;
+        height: 100vh;
+        background-color: rgb(234, 236, 239);
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .row {
+        justify-content: center;
+        align-items: center;
+        margin: 12px;
+    }
+    .row-element {
+        margin: 2px;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+</style>

@@ -1,71 +1,12 @@
-<style>
-    .card {
-        width: 18rem;
-        margin-bottom: 12px;
-    }
-
-    .card-btn {
-        margin: 5px;
-    }
-
-    .fx-container {
-        justify-content: left;
-    }
-
-    .fx-row {
-        align-items: center;
-    }
-
-    p.lead {
-        margin: 5px;
-    }
-
-    .badge {
-        margin: 5px;
-    }
-
-    .sm-form {
-        max-width: 4rem;
-        margin: 5px;
-    }
-
-    .body-container {
-        display: flex;
-        justify-content: center;
-    }
-
-    .modal-row {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    .fx-form {
-        max-width: 12rem;
-        margin-right: 10px;
-    }
-
-    .sm-btn {
-        width: 2rem;
-        height: 2rem;
-        margin: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
-
-<script>
-    import { Modal, ModalBody, ModalFooter, ModalHeader } from 'sveltestrap';
+<script lang='ts'>
+    import { Modal, ModalBody, ModalFooter, ModalHeader } from 'sveltestrap/src';
 
     export let name = "Default";
     export let initiative = 0;
-
     let hp = 0;
     let ac = 0;
     let maxHP = 0;
-
     let effects = [];
-
     let openModal = false;
     const toggleModal = () => {openModal = !openModal};
 
@@ -73,7 +14,6 @@
     let newAC = ac;
     let newHP = hp;
     let newMaxHP = maxHP;
-
     let newEffect = '';
     let newEffects = [...effects];
 
@@ -124,26 +64,27 @@
     </div>
 </div>
 
-<Modal isOpen={openModal} toggle={toggleModal}>
+<Modal isOpen={openModal} toggle={toggleModal} transitionOptions>
     <ModalHeader toggle={toggleModal}>Edit {name}</ModalHeader>
     <ModalBody>
         <div class="body-container">
             <div class="row modal-row">
                 <span class="badge badge-info"><p class="lead">AC</p></span>
-                <input class="form-control sm-form" type="number" value={newAC} on:change={event => { newAC = event.target.value }}>
+                <!-- <input class="form-control sm-form" type="number" value={newAC} on:change={event => { newAC = event.target.value }}> -->
+                <input class="form-control sm-form" type="number" bind:value={newAC}>
             </div>
             <div class="row modal-row">
                 <span class="badge badge-success"><p class="lead">HP</p></span>
-                <input class="form-control sm-form" type="number" value={newHP} on:change={event => { newHP = event.target.value }}>
+                <input class="form-control sm-form" type="number" bind:value={newHP}>
             </div>
             <div class="row modal-row">
                 <span class="badge badge-success"><p class="lead">Max HP</p></span>
-                <input class="form-control sm-form" type="number" value={newMaxHP} on:change={event => { newMaxHP = event.target.value }}>
+                <input class="form-control sm-form" type="number" bind:value={newMaxHP}>
             </div>
         </div>
         <br/>
         <div class="row justify-content-center">
-            <input placeholder="New Effect" value={newEffect} class="form-control fx-form" on:change={event => { newEffect = event.target.value }}>
+            <input placeholder="New Effect" class="form-control fx-form" bind:value={newEffect}>
             <button class="btn btn-primary" on:click={addEffect}>Add</button>
         </div>
         <br/>
@@ -163,3 +104,49 @@
         <button class="btn btn-secondary" on:click={toggleModal}>Close</button>
     </ModalFooter>
 </Modal>
+
+<style>
+    .card {
+        width: 18rem;
+        margin-bottom: 12px;
+    }
+    .card-btn {
+        margin: 5px;
+    }
+    .fx-container {
+        justify-content: left;
+    }
+    .fx-row {
+        align-items: center;
+    }
+    p.lead {
+        margin: 5px;
+    }
+    .badge {
+        margin: 5px;
+    }
+    .sm-form {
+        max-width: 4rem;
+        margin: 5px;
+    }
+    .body-container {
+        display: flex;
+        justify-content: center;
+    }
+    .modal-row {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .fx-form {
+        max-width: 12rem;
+        margin-right: 10px;
+    }
+    .sm-btn {
+        width: 2rem;
+        height: 2rem;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
