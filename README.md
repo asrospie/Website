@@ -5,11 +5,11 @@ This is the repo for my personal website located at <https://alec.surge.sh>. It 
 
 ## Hosting
 
-This site is hosted using [Surge]<https://surge.sh>. It is currently a static website.
+This site is hosted using [Surge](https://surge.sh). It is currently a static website.
 
 ## Build
 
-This website was originally built using [SvelteJS]<https://svelte.dev/>, however, I have recently updated it to [Sapper]<https://sapper.svelte.dev>. Additionally, it is utilizing TypeScript for the most part.
+This website was originally built using [SvelteJS](https://svelte.dev/), however, I have recently updated it to [Sapper](https://sapper.svelte.dev). Additionally, it is utilizing TypeScript for the most part.
 
 ## To Do
 - [ ] Create projects page to showcase current projects on GitHub (integrate GitHub api?)
