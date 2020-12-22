@@ -18,19 +18,18 @@
     <Collapse {isOpen} navbar expand='md' on:update={handleUpdate}>
         <Nav class='ml-auto' navbar>
             <NavItem>
-                <!-- <NavLink href='/'>Home</NavLink> -->
-                <a class='nav-link' href='/'>Home</a>
+                <NavLink href='/'>Home</NavLink>
             </NavItem>
             <NavItem>
-                <!-- <NavLink href='/dndtools'>D&D Tools</NavLink> -->
-                <a class='nav-link' href='/dndtools'>D&D Tools</a>
+                <NavLink href='/dndtools'>D&D Tools</NavLink>
             </NavItem>
             <NavItem>
-                <!-- <NavLink href='https://github.com/asrospie/'>GitHub</NavLink> -->
-                <a class='nav-link' href='https://github.com/asrospie/'>GitHub</a>
+                <NavLink href='https://github.com/asrospie/'>GitHub</NavLink>
             </NavItem>
         </Nav>
     </Collapse>
+    
+    <!-- For the sapper compiler to see visible links to create routes -->
     <div style="visibility: hidden; position: absolute">
         <a href="/">home</a>
         <a href="/dndtools">d&d tools</a>
