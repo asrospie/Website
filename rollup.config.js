@@ -28,7 +28,15 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+                'process.env.NODE_ENV': JSON.stringify(mode),
+                // // __myapp: JSON.stringify({
+                // //     env: {
+                // //         isProd: production,
+                // //         ...cfig.parsed,
+                // //         // SPOTIFY_TOKEN: process.env.SPOTIFY_TOKEN,
+                // //         // SPOTIFY_CLIENT: process.env.SPOTIFY_CLIENT,
+                // //     }
+                // })
 			}),
 			svelte({
 				preprocess: sveltePreprocess(),

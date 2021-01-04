@@ -4,7 +4,6 @@
         NavItem, NavLink, Navbar,
     } from 'sveltestrap/src';
 
-    const style: string = 'color: white;';
     let isOpen = false;
 
     function handleUpdate(event: any) {
@@ -24,6 +23,9 @@
                 <NavLink href='/dndtools'>D&D Tools</NavLink>
             </NavItem>
             <NavItem>
+                <NavLink href='/livelyrics'>Lyrics</NavLink>
+            </NavItem>
+            <NavItem>
                 <NavLink href='https://github.com/asrospie/'>GitHub</NavLink>
             </NavItem>
         </Nav>
@@ -33,6 +35,7 @@
     <div style="visibility: hidden; position: absolute">
         <a href="/">home</a>
         <a href="/dndtools">d&d tools</a>
+        <a href="/livelyrics">lyrics</a>
         <a href="https://github.com/asrospie">github</a>
     </div>
 </Navbar>
